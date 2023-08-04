@@ -5,16 +5,20 @@ import ReactPlayer from 'react-player';
 import { Typography, Box, Stack } from '@mui/material';
 import { CheckCircle } from '@mui/icons-material';
 
-import { Video } from './';
+import { Videos } from './';
 import { fetchFromAPI } from '../utils/fetchFromAPI';
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
-  const {id } = useParams();
+  const [relatedVideos, setRelatedVideos] = useState(null);
+  const { id } = useParams();
 
   useEffect(() => {
     fetchFromAPI(`videos?part=snippet,statistics&id=${id}`)
       .then((data) => setVideoDetail(data.items[0]));
+
+    fetchFromAPI(`search?part=snippet&relatedToVideoId=${id}&type=video&maxResults=15`)
+      .then((data) => setRelatedVideos(data.items));
   }, [id]);
 
   if (!videoDetail?.snippet) return 'Loading...';
@@ -22,7 +26,7 @@ const VideoDetail = () => {
   const { snippet: { title, channelId, channelTitle }, statistics: { viewCount, likeCount } } = videoDetail;
   
   return (
-    <Box minHeight="95vh" px={25}>
+    <Box minHeight="95vh" pl={9}>
       <Stack direction={{ xs: 'column', md: 'row' }}>
         <Box flex={1}>
           <Box sx={{ width: '100%', position: 'sticky', top: '86px'}}>
@@ -47,6 +51,10 @@ const VideoDetail = () => {
               </Stack>
             </Stack>
           </Box>
+        </Box>
+
+        <Box px={2} py={{xs: 5, md: 1}} justifyContent="center" alignItems="center">
+          <Videos videos={relatedVideos} direction="column" />
         </Box>
       </Stack>
     </Box>
