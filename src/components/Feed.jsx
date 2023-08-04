@@ -1,4 +1,3 @@
-// eslint-disable-next-line
 import { useState, useEffect } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 
@@ -23,7 +22,7 @@ const Feed = () => {
           setSelectedCategory={setSelectedCategory}
         />
 
-        <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: '#fff' }}>
+        <Typography className="copyright" variant="caption" sx={{ mt: 1.5, color: '#fff' }}>
           Copyright 2023 Lucas Comamala
         </Typography>
       </Box>
@@ -39,4 +38,4 @@ const Feed = () => {
   )
 }
 
-export default Feed
+export default Feed;
