@@ -1,4 +1,4 @@
-# 📖 ReactTube
+# ▶️ ReactTube
 
 ReactTube is a youtube clone application built with React utilizing Material UI.
 
