@@ -3,11 +3,10 @@ import { useParams } from 'react-router-dom';
 import { Box, Stack, Typography } from '@mui/material';
 
 import { fetchFromAPI } from '../utils/fetchFromAPI';
-import { Sidebar, Videos } from './';
+import { Videos } from './';
 
 
 const SearchFeed = () => {
-  const [selectedCategory, setSelectedCategory] = useState('');
   const [videos, setVideos] = useState([]);
 
   const { searchTerm } = useParams();
