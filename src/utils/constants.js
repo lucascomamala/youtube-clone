@@ -16,13 +16,13 @@ import NewspaperIcon from '@mui/icons-material/Newspaper';
 export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
 
 export const categories = [
-  { name: 'Home', icon: <HomeIcon />, },
+  { name: 'New', icon: <HomeIcon />, },
   { name: 'Coding', icon: <CodeIcon />, },
-  { name: 'News', icon: <NewspaperIcon />, },
   { name: 'Music', icon: <MusicNoteIcon /> },
   { name: 'Education', icon: <SchoolIcon />, },
   { name: 'Podcasts', icon: <GraphicEqIcon />, },
   { name: 'Movies', icon: <OndemandVideoIcon />, },
+  { name: 'News', icon: <NewspaperIcon />, },
   { name: 'Gaming', icon: <SportsEsportsIcon />, },
   { name: 'Live', icon: <LiveTvIcon />, },
   { name: 'Sports', icon: <FitnessCenterIcon />, },
