@@ -4,7 +4,7 @@ ReactTube is a youtube clone application built with React utilizing Material UI.
 
 ## 💡 Live Build
 
-[ReactTube](https://master--zesty-sunflower-d1969c.netlify.app/)
+[ReactTube](https://react-you-tube.netlify.app/)
 
 ## 🛠️ Installation
 
