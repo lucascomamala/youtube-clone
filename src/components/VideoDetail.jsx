@@ -26,7 +26,7 @@ const VideoDetail = () => {
   const { snippet: { title, channelId, channelTitle }, statistics: { viewCount, likeCount } } = videoDetail;
   
   return (
-    <Box minHeight="95vh" pl={9}>
+    <Box minHeight="95vh" pl={{xs: 0, lg: 9}}>
       <Stack direction={{ xs: 'column', md: 'row' }}>
         <Box flex={1}>
           <Box sx={{ width: '100%', position: 'sticky', top: '86px'}}>
