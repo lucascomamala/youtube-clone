@@ -1,3 +1,6 @@
+
+![Capture](https://github.com/lucascomamala/youtube-clone/assets/10102977/5c303e00-08fb-4b5e-a888-184a387c3580)
+
 # ▶️ ReactTube
 
 ReactTube is a youtube clone application built with React utilizing Material UI.
